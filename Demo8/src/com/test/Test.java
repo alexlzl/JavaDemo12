@@ -19,5 +19,19 @@ public class Test {
 
         System.out.println(str2.intern() == str2);//FALSE
 
+        String s0="kvill";
+        String s1="kvill";
+        String s2="kv" + "ill";
+        System.out.println( s0==s1 );//true
+        System.out.println( s0==s2 );//true
+
+
+        String ss0="kvill";
+        String ss1=new String("kvill");
+        String ss2="kv" + new String("ill");
+        System.out.println( ss0==ss1 );//false
+        System.out.println( ss0==ss2 );//false
+        System.out.println( ss1==ss2 );//false
+
     }
 }
